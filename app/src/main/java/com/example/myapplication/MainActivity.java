@@ -3,7 +3,10 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(photoAdapter);
         circleIndicator.setViewPager(viewPager);
         photoAdapter.registerDataSetObserver(circleIndicator.getDataSetObserver());
+//        TextView tv1=findViewById(R.id.tv1);
+//        Typeface tf=Typeface.createFromAsset(getAssets(),"Oswald-VariableFont_wght.ttf");
+//        tv1.setTypeface(tf);
     }
     private List<photo> getlistPhoto(){
         List<photo>list=new ArrayList<>();
